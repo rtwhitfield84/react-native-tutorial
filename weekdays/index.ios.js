@@ -6,13 +6,18 @@ var DAYS = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sa
 
 //create a react component
 var Weekdays = React.createClass({
-  render: () => {
+  render: function() {
     return <View style={styles.container}>
       <Text>
         Days of the week:
       </Text>
-      <DayItem day={DAYS[0]}/>
+      {this.days()}
     </View>
+  },
+  days: function() {
+    return DAYS.map(function(day){
+      return <DayItem day={day} /> 
+    });
   }
 });
 

@@ -1,7 +1,7 @@
 //import react library
 import React, {Component} from 'react';
 import {View, AppRegistry, Text, StyleSheet} from 'react-native';
-
+var DayItem = require('./src/day-item');
 var DAYS = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 //create a react component
@@ -11,6 +11,7 @@ var Weekdays = React.createClass({
       <Text>
         Days of the week:
       </Text>
+      <DayItem day={DAYS[0]}/>
     </View>
   }
 });
